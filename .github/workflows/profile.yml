@@ -1,0 +1,21 @@
+name: Add Stars
+
+on: [watch]
+
+jobs:
+  addstars:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: add watcher to readme
+      run: |
+        curl https://avatars.githubusercontent.com/${{github.actor}} > profile.jpeg
+        echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}"
+    - uses: mfinelli/setup-imagemagick@v1
+    - run:  convert profile.jpeg summer.png -gravity center -composite output.png
+    - run: ls
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        path: output.png
+     
