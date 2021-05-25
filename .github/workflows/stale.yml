@@ -8,7 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: add watcher to readme
-    - run: echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}"
+    - run: |
+        echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}"
 #      run: echo -e "\nWe got a :star: from [@${{github.actor}}](https://github.com/${{github.actor}})" >> README.md 
     
 #     - name: Commit changes
