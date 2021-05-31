@@ -20,7 +20,7 @@ jobs:
         echo "doesn't exist!"
        fi
        emojies="🍸🍹👙🐠☀️🏝🥂🍺🐬"
-       EMOJI="${var:$(( RANDOM % ${#var} )):1}"
+       EMOJI="${emojies:$(( RANDOM % ${#emojies} )):1}"
 
        IMAGE="$(cat profile.jpeg | base64 -w 0)" 
        IMGTAG="<td>$EMOJI<a href="https://github.com/${{ github.actor }}"><img alt='${{ github.actor }}' src='data:image/jpeg;base64,$IMAGE' width='25px' /></a></td>"
