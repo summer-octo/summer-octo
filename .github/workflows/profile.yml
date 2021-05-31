@@ -21,7 +21,7 @@ jobs:
        fi
 
        IMAGE="$(cat profile.jpeg | base64 -w 0)" 
-       IMGTAG="🍸<td><img alt='${{ github.actor }}' src='data:image/jpeg;base64,$IMAGE' width='25px' /></td>"
+       IMGTAG="<td>🍸<img alt='${{ github.actor }}' src='data:image/jpeg;base64,$IMAGE' width='25px' /></td>"
        sed -e "\|<!-- end-marker-column-row -->|i $IMGTAG" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v2
