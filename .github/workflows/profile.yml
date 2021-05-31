@@ -21,8 +21,8 @@ jobs:
        fi
 
        image="$(cat profile.jpeg | base64 -w 0)" 
-       MY_DATE="🍸<td><img alt='${{ github.actor }}'src='data:image/jpeg;base64,$test' width='25px' /></td>"
-       sed -e "\|<!-- end-marker-column-row -->|i $MY_DATE" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
+       IMGTAG="🍸<td><img alt='${{ github.actor }}' src='data:image/jpeg;base64,$test' width='25px' /></td>"
+       sed -e "\|<!-- end-marker-column-row -->|i $IMGTAG" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v2
       env:
