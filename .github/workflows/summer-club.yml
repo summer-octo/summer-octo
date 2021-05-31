@@ -1,9 +1,9 @@
 name: Add Stars
 
-on: [push]
+on: [push, watch, issues]
 
 jobs:
-  addstars:
+  add-member-to-club:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
