@@ -13,7 +13,7 @@ jobs:
         echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}"
     - name: base64 image
       run: |
-       test="$(cat profile.jpeg | base64)"
+       test="$(cat profile.jpeg | base64 -w 0)" 
        echo $test
        
        
