@@ -23,6 +23,11 @@ jobs:
        echo "22222"
        
        sed '/<!-- end-marker-column-row -->/i"$imgtag"' summer-footer.svg
+    - name: Commit changes
+      uses: elstudio/actions-js-build/commit@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUSH_BRANCH: 'main'
     - uses: mfinelli/setup-imagemagick@v1
     - run:  convert profile.jpeg summer.png -resize 400x400 -gravity center -composite output.png
     - run: ls
