@@ -14,7 +14,7 @@ jobs:
     - name: base64 image
       run: |
        test="$(cat profile.jpeg | base64)"
-       imgtag='🍸<img src="data:image/jpeg;base64,${test}" width="25px" />'
+       imgtag='🍸<img src="data:image/jpeg;base64,'${test}'" width="25px" />'
        echo $imgtag
        sed '/<!-- end-marker-column-row -->/i'${imgtag}'' summer-footer.svg
     - uses: mfinelli/setup-imagemagick@v1
