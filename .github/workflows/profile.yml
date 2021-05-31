@@ -17,7 +17,7 @@ jobs:
        echo $test
        
        
-       imgtag='🍸<img src="data:image/jpeg;base64,'${test}'" width="25px" />'
+       imgtag="🍸<img src='data:image/jpeg;base64,$test' width='25px' />"
        echo "1111"
        echo $imgtag
        echo "2222"
