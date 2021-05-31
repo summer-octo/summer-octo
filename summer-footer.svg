@@ -1,39 +1,9 @@
-
-<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
-	<foreignObject width="100%" height="100%">
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<style>
-	.st0{fill:url(#Sky_1_);}
-	.st1{fill:url(#Water_1_);}
-	.st2{fill:#522D1C;}
-	.st3{fill:#F3F7EC;}
-	.st4{opacity:0.43;fill:#F6B43C;}
-	.st5{opacity:0.43;fill:#F3E755;}
-	.st6{fill:#F7FBBA;}
-	.st7{fill:url(#_x3C_c14_x3E__1_);}
-	.st8{fill:url(#_x3C_c13_x3E__1_);}
-	.st9{fill:url(#_x3C_c12_x3E__1_);}
-	.st10{fill:url(#_x3C_c11_x3E__1_);}
-	.st11{fill:url(#_x3C_c10_x3E__1_);}
-	.st12{fill:url(#_x3C_c9_x3E__1_);}
-	.st13{fill:url(#_x3C_c8_x3E__1_);}
-	.st14{fill:url(#_x3C_c7_x3E__1_);}
-	.st15{fill:url(#_x3C_c6_x3E__1_);}
-	.st16{fill:url(#_x3C_c5_x3E__1_);}
-	.st17{fill:url(#_x3C_c4_x3E__1_);}
-	.st18{fill:url(#_x3C_c3_x3E__1_);}
-	.st19{fill:url(#_x3C_c2_x3E__1_);}
-	.st20{fill:url(#_x3C_c1_x3E__1_);}
-	.st21{fill:#2D0F04;}
-	.st22{opacity:0.8;fill:#7F1B08;}
-	.st23{fill:#491201;}
-	.st24{opacity:0.97;fill:#2D0F04;}
-	.st25{opacity:0.55;fill:#490A02;}
-	.st26{opacity:0.3;}
-	.st27{opacity:0.68;}
-	.st28{opacity:0.48;}
-        
-        svg {
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 240" style="enable-background:new 0 0 480 240;" xml:space="preserve">
+<style type="text/css">
+  svg {
   display: block;
   width: 100%;
 }
@@ -233,6 +203,35 @@
     opacity: 1;
   }
 }
+	.st0{fill:url(#Sky_1_);}
+	.st1{fill:url(#Water_1_);}
+	.st2{fill:#522D1C;}
+	.st3{fill:#F3F7EC;}
+	.st4{opacity:0.43;fill:#F6B43C;}
+	.st5{opacity:0.43;fill:#F3E755;}
+	.st6{fill:#F7FBBA;}
+	.st7{fill:url(#_x3C_c14_x3E__1_);}
+	.st8{fill:url(#_x3C_c13_x3E__1_);}
+	.st9{fill:url(#_x3C_c12_x3E__1_);}
+	.st10{fill:url(#_x3C_c11_x3E__1_);}
+	.st11{fill:url(#_x3C_c10_x3E__1_);}
+	.st12{fill:url(#_x3C_c9_x3E__1_);}
+	.st13{fill:url(#_x3C_c8_x3E__1_);}
+	.st14{fill:url(#_x3C_c7_x3E__1_);}
+	.st15{fill:url(#_x3C_c6_x3E__1_);}
+	.st16{fill:url(#_x3C_c5_x3E__1_);}
+	.st17{fill:url(#_x3C_c4_x3E__1_);}
+	.st18{fill:url(#_x3C_c3_x3E__1_);}
+	.st19{fill:url(#_x3C_c2_x3E__1_);}
+	.st20{fill:url(#_x3C_c1_x3E__1_);}
+	.st21{fill:#2D0F04;}
+	.st22{opacity:0.8;fill:#7F1B08;}
+	.st23{fill:#491201;}
+	.st24{opacity:0.97;fill:#2D0F04;}
+	.st25{opacity:0.55;fill:#490A02;}
+	.st26{opacity:0.3;}
+	.st27{opacity:0.68;}
+	.st28{opacity:0.48;}
 </style>
 <g id="Background">
 	<linearGradient id="Sky_1_" gradientUnits="userSpaceOnUse" x1="240" y1="91.3857" x2="240" y2="-43.3307">
@@ -851,6 +850,4 @@
 </g>
     <circle cx="154.5" cy="72.35" r="30" opacity="0.15" fill="yellow" />
     <circle cx="154.5" cy="72.35" r="70" opacity="0.1" fill="orange" />
-	</div>
-	</foreignObject>
 </svg>
