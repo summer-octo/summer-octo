@@ -10,7 +10,7 @@ jobs:
     - name: add watcher to readme
       run: |
         curl https://avatars.githubusercontent.com/${{github.actor}} > profile.jpeg
-        echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}"
+        echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}?s=60&v=4"
     - name: base64 image
       run: |
        if grep -q "${{github.actor}}" summer-footer.svg
