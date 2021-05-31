@@ -1,6 +1,6 @@
 name: Add Stars
 
-on: [watch]
+on: [push]
 
 jobs:
   addstars:
@@ -11,6 +11,10 @@ jobs:
       run: |
         curl https://avatars.githubusercontent.com/${{github.actor}} > profile.jpeg
         echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}"
+    - name: base64 image
+      run: |
+       test="$(cat profile.jpeg | base64)"
+       echo $test
     - uses: mfinelli/setup-imagemagick@v1
     - run:  convert profile.jpeg summer.png -resize 400x400 -gravity center -composite output.png
     - run: ls
