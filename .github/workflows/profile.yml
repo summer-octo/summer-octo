@@ -22,7 +22,7 @@ jobs:
        echo $imgtag
        echo "22222"
        
-       sed -e '/<!-- end-marker-column-row -->/i"$imgtag"' summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
+       sed -e '/<!-- end-marker-column-row -->/i"'"$imgtag"'" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v2
       env:
