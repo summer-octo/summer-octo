@@ -818,6 +818,7 @@
   </td>
 "$imgtag"
 "$imgtag"
+"${imgtag}"
 <!-- end-marker-column-row -->
   </tr>
     </table>
