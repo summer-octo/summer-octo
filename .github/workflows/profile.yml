@@ -22,7 +22,7 @@ jobs:
        echo $imgtag
        echo "2222"
        
-       sed '/<!-- end-marker-column-row -->/i'${imgtag}'' summer-footer.svg
+       # sed '/<!-- end-marker-column-row -->/i'${imgtag}'' summer-footer.svg
     - uses: mfinelli/setup-imagemagick@v1
     - run:  convert profile.jpeg summer.png -resize 400x400 -gravity center -composite output.png
     - run: ls
