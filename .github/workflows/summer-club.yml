@@ -1,4 +1,4 @@
-name: Add Stars
+name: Join the Summer Club
 
 on: [push, watch, issues]
 
