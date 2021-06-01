@@ -15,10 +15,11 @@ jobs:
       run: |
        if grep -q "${{github.actor}}" summer-footer.svg
        then
-        echo "exists!"
+        grep -v '${{github.actor}}' summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
        else
         echo "doesn't exist!"
        fi
+
        emojies="🍸🍹👙🐠☀️🏝🥂🍺🐬"
        EMOJI="${emojies:$(( RANDOM % ${#emojies} )):1}"
 
