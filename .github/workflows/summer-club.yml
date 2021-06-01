@@ -20,7 +20,7 @@ jobs:
         echo "doesn't exist!"
        fi
 
-       emojies="🍸🍹👙🐠☀️🏝🥂🍺🐬"
+       emojies="🍸🍹👙🐠🌞🏝🥂🍺🐬"
        EMOJI="${emojies:$(( RANDOM % ${#emojies} )):1}"
 
        IMAGE="$(cat profile.jpeg | base64 -w 0)" 
