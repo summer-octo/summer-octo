@@ -15,7 +15,7 @@ jobs:
       with:  
         ref: github-pages
     - name: get city id
-      run: 
+      run: |
         CITY_ID=$(curl -s https://openweathermap.org/data/2.5/find\?q\=${{ env.CITY }} \&type\=like\&sort\=population\&cnt\=30\&appid\=${{ secrets.OPENWEATHER_API_TOKEN }} | jq '.list[0].id')
         echo $CITY_ID
         sed -i "1s|.*|<script>var city_id=$CITY_ID</script>|" index.html
