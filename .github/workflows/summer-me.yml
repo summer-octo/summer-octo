@@ -2,7 +2,7 @@ name: Summer me!
 
 on: 
   issues: 
-    types: [opened, labeled]
+    types: [opened]
   
 jobs:
   summer-me-profile-pic:
