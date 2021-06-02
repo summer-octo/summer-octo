@@ -9,7 +9,6 @@ jobs:
   update-weather-image:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
     - name: Screenshot Website
       id: screenshot
       uses: swinton/screenshot-website@v1.x
@@ -18,9 +17,8 @@ jobs:
         destination: weather.png
         width: 725
         height: 260
-    - run: |
-        ls
-        cp ${{ steps.screenshot.outputs.path }} weather.png
+    - uses: actions/checkout@v2
+    - run: cp ${{ steps.screenshot.outputs.path }} weather.png
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update weather image
