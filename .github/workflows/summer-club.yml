@@ -2,7 +2,7 @@ name: Join the Summer Club
 
 on: [issues, watch]
 
-concurrency: summer_club
+concurrency: readme_update
 
 jobs:
   add-member-to-club:
