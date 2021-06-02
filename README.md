@@ -1,6 +1,8 @@
 # secret-profile
 
 <div align="center">
+	<h2> Do we have summer weather? </h2>
+	<img src="./weather.png" />
 	<h2> Summer games</h2>
 	|
 	|
