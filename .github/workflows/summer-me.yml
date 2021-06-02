@@ -5,9 +5,9 @@ on:
     types: [opened, labeled]
   
 jobs:
-  if: ${{ github.event.label.name == 'summer-me' }}
   summer-me-profile-pic:
     runs-on: ubuntu-latest
+    if: ${{ github.event.label.name == 'summer-me' }}
     steps:
       - run: echo "123"
   
