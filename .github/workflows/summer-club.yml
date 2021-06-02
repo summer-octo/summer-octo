@@ -1,6 +1,6 @@
 name: Join the Summer Club
 
-on: [push, watch, issues]
+on: [watch]
 
 jobs:
   add-member-to-club:
