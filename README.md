@@ -1,6 +1,7 @@
-# secret-profile
+
 
 <div align="center">
+🌞 <a href="https://github.com/SvanBoxel/secret-profile/issues/new/choose"> Make your GitHub profile picture summer-ready with GitHub Actions 🌞 </a>
 	<h2> Do we have summer weather? </h2>
 	<img src="./weather.png" />
 	<h2> Summer games</h2>
