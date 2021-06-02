@@ -31,5 +31,5 @@ jobs:
           type: create
           token: ${{ secrets.GITHUB_TOKEN }}
           body: "![](https://summerfest2021.blob.core.windows.net/summer-profiles/summer-${{ github.actor }}.png)"
-          issue_number: ${{ github.issue.number }} 
+          issue_number: ${{ github.event.issue.number }}
 
