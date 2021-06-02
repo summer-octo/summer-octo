@@ -1,6 +1,8 @@
 name: Join the Summer Club
 
-on: [watch]
+on: [issues, watch]
+
+concurrency: summer_club
 
 jobs:
   add-member-to-club:
