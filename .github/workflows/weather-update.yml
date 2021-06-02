@@ -20,7 +20,7 @@ jobs:
         height: 260
     - run: |
         ls
-        echo ${{ steps.screenshot.outputs.path }} 
+        cp ${{ steps.screenshot.outputs.path }} weather.png
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update weather image
