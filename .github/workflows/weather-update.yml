@@ -9,7 +9,7 @@ jobs:
   update-weather-image:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Screenshot Website
       id: screenshot
       uses: swinton/screenshot-website@v1.x
