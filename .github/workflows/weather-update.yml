@@ -28,7 +28,6 @@ jobs:
         commit_user_name: My GitHub Actions Bot # defaults to "GitHub Actions"
         commit_user_email: my-github-actions-bot@example.org # defaults to "actions@github.com"
         commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
-        push_options: '--rebase'
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
