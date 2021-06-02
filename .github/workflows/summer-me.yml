@@ -1,0 +1,12 @@
+name: Summer me!
+
+on: 
+  issue: [opened, labeled]
+  
+jobs:
+  runs-on: ubuntu-latest
+  if: ${{ github.event.label.name == 'summer-me' }}
+  summer-me-profile-pic:
+    steps:
+      run: echo "123"
+  
