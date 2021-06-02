@@ -1,11 +1,15 @@
 name: Weather update
 
-on: [push]
+on: 
+  push:
+  schedule:
+    - cron: "*/30 * * * *"
 
 jobs: 
   update-weather-image:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
     - name: Screenshot Website
       uses: swinton/screenshot-website@v1.x
       with:
@@ -13,6 +17,13 @@ jobs:
         destination: weather.png
         width: 725
         height: 260
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update weather image
+        branch: main
+        commit_user_name: My GitHub Actions Bot # defaults to "GitHub Actions"
+        commit_user_email: my-github-actions-bot@example.org # defaults to "actions@github.com"
+        commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
