@@ -16,7 +16,12 @@ jobs:
           echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}?s=400&v=4"
       - uses: mfinelli/setup-imagemagick@v1
       - run:  convert profile.jpeg summer.png -resize 400x400 -gravity center -composite output.png
-      - run: ls
+      - name: Azure Storage Action
+        uses: lauchacarro/Azure-Storage-Action@v1.1
+        with:
+          connection-string: ${{secrets.AZURE_CONNECTION_STRING}}
+          blob-container-name: summer-profiles
+          public-access-policy: public
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
         with:
