@@ -17,6 +17,7 @@ jobs:
         destination: weather.png
         width: 725
         height: 260
+        delay: 5
     - uses: actions/checkout@v2
     - run: cp ${{ steps.screenshot.outputs.path }} weather.png
     - uses: stefanzweifel/git-auto-commit-action@v4
