@@ -11,8 +11,8 @@ jobs:
       with:
         source: https://svanboxel.github.io/secret-profile/
         destination: weather.png
-        width: 1450
-        height: 520
+        width: 7725
+        height: 260
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
