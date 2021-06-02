@@ -18,7 +18,7 @@ jobs:
       run: 
         CITY_ID=$(curl -s https://openweathermap.org/data/2.5/find\?q\=${{ env.CITY }} \&type\=like\&sort\=population\&cnt\=30\&appid\=${{ secrets.OPENWEATHER_API_TOKEN }} | jq '.list[0].id')
         CITY_ID_SCRIPT="<script>var city_id=${{ env.CITY_ID }}</script>"
-        sed -i "1s|.*|$CITY_ID_SCRIPT|" index.html > index.html.tmp && mv index.html.tmp index.html
+        sed -i "1s|.*|$CITY_ID_SCRIPT|" index.html
       env: 
         CITY: 'AMSTERDAM'
     - uses: stefanzweifel/git-auto-commit-action@v4
