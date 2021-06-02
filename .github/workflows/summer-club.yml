@@ -1,6 +1,6 @@
 name: Join the Summer Club
 
-on: [issues, watch]
+on: [workflow_dispatch, issues, watch]
 
 concurrency: readme_update
 
