@@ -24,7 +24,12 @@ jobs:
           folder: profile-pic
           blob-container-name: summer-profiles
           public-access-policy: public
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2.2.3
+      - name: Comment Action
+        uses: JungWinter/comment@v1.1.0
         with:
-          path: output.png
+          # create|edit
+          type: create
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: "![](https://summerfest2021.blob.core.windows.net/summer-profiles/summer-${{ github.actor }}.png)"
+          issue_number: ${{ github.issue.number }} 
+
