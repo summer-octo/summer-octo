@@ -1,7 +1,8 @@
 name: Summer me!
 
 on: 
-  issues: [opened, labeled]
+  issues: 
+    types: [opened, labeled]
   
 jobs:
   if: ${{ github.event.label.name == 'summer-me' }}
