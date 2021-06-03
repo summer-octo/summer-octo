@@ -29,15 +29,28 @@
 👙
 👡
 
+---
 
-### 🌞 <a href="https://github.com/SvanBoxel/secret-profile/issues/new/choose"> Make your GitHub profile picture summer-ready with GitHub Actions 🌞 </a> 
+### Step 1: <a href="https://github.com/SvanBoxel/secret-profile/issues/new/choose"> 🌞  Make your GitHub profile picture summer-ready with GitHub Actions 🌞 </a> 
 
-<h2> Do we have summer weather? </h2>
-	<img src="./weather.png" />
-	<h2> Summer games</h2>
+---
+### Step 2: What clothes to wear? 🥵👙👕🕶️
+	
+<img src="./weather.png" />
+
+---
+### Step 3: Participate in GitHub's Summer games</h2>
 	🌞 Todo
-	<br>
-	<h2> Our little summer club</h2>
-		<img src="summer-footer.svg" width="1024" height="500">
-	<br>
+
+---
+
+### Step 4: Join ✨ GitHub's exclusive Summer Club ✨ 
+
+<img src="summer-footer.svg" width="1024" height="500">
+
+---
+
+### Final step: 📣 Spread the word and be creative on your summer-ready GitHub profile 📣
+
+Fork it! 
 </div>
