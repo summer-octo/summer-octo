@@ -50,7 +50,7 @@
 
 ---
 
-### Final step: 📣 Spread the word and be creative on your summer-ready GitHub profile 📣
+### Final step: 📣 Spread the word and be creative with your summer-ready GitHub profile 📣
 
 Fork it! 
 </div>
