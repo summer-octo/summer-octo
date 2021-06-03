@@ -31,14 +31,30 @@
 
 ---
 
-### Step 1: <a href="https://github.com/SvanBoxel/secret-profile/issues/new/choose"> 🌞  Make your GitHub profile picture summer-ready with GitHub Actions 🌞 </a> 
+### Step 1: <a href="https://github.com/SvanBoxel/secret-profile/issues/new/choose"> 🌞 Make your GitHub profile picture summer ready with GitHub Actions 🌞 </a> 
 
 ---
-### Step 2: What clothes to wear? 🥵👙👕🕶️
+
+<table>
+<tr>
+<td>
+
+### Step 2.1: What clothes to wear? 🥵
 	
 <img src="./weather.png" />
+				
+</td>
+<td>
+	
+### Step 2.2: Play some summer tunes 🎷
+[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=1114125855&cover_image=true&theme=default)](https://github.com/kittinan/spotify-github-profile)
+			
+</td>
+</tr>
+</table>
 
 ---
+
 ### Step 3: Participate in GitHub's Summer games</h2>
 	🌞 Todo
 
