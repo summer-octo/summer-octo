@@ -18,7 +18,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: ${{ github.event.issue.number }},
-              title: "😎 Summer profile picture for @${{github.actor}}"
+              title: "😎 Summer profile picture for @${{github.actor}}",
               body: "Working on it, stay tuned and grab something to drink. 🍸" 
             });
       - uses: actions/checkout@v1
