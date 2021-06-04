@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: get picture
       run: |
-        curl https://avatars.githubusercontent.com/${{env.handle}}?s=120&v=4 > profile.jpeg
+        curl -o profile.jpeg https://avatars.githubusercontent.com/${{env.handle}}?s=120
     - name: add ${{env.handle}} to the club
       run: |
        if grep -q "${{env.handle}}" summer-footer.svg
