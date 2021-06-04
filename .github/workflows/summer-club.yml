@@ -1,6 +1,6 @@
 name: Join the Summer Club
 
-on: [workflow_dispatch, issues, watch]
+on: [workflow_dispatch, watch]
 
 concurrency: readme_update
 
@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: add watcher to readme
+    - name: get picture
       run: |
         curl https://avatars.githubusercontent.com/${{github.actor}} > profile.jpeg
         echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}?s=60&v=4"
-    - name: base64 image
+    - name: add ${{github.actor}} to the club
       run: |
        if grep -q "${{github.actor}}" summer-footer.svg
        then
@@ -26,6 +26,8 @@ jobs:
        EMOJI="${emojies:$(( RANDOM % ${#emojies} )):1}"
 
        IMAGE="$(cat profile.jpeg | base64 -w 0)" 
+       echo $IMAGE
+       
        IMGTAG="<td>$EMOJI<a href='https://github.com/${{ github.actor }}'><img alt='${{ github.actor }}' src='data:image/jpeg;base64,$IMAGE' width='25px' /></a></td>"
        sed -e "\|<!-- end-marker-column-row -->|i $IMGTAG" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
     - name: Commit changes
