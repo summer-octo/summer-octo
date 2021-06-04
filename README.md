@@ -16,8 +16,7 @@
 	
 # Your summer-ready GitHub profile 
 
-Follow this 6-step plan and get ready for the Summer together with your friends at GitHub  😎🏄🏊🐚🌻🌴🍹🏝️🕶️👕👙
-
+Follow this 6-step plan and get ready for the Summer together with your friends at GitHub!
 	
 - Step 1: Customize your GitHub profile picture with GitHub Actions to show you're ready 🌞
 - Step 2: Decide what clothes to wear? 🥵
