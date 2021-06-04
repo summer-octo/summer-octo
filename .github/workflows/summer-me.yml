@@ -9,8 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.label.name == 'summer-me' }}
     steps:
+      - name: Update comment
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const req = {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.issue.number }}
+              title: "😎 Summer profile picture for @${{github.actor}}"
+            };
+
+            await github.issues.update(req);
       - uses: actions/checkout@v1
-      - name: add watcher to readme
+      - name: fetch profile pictrue
         run: |
           curl https://avatars.githubusercontent.com/${{github.actor}} > profile.jpeg
           echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}?s=400&v=4"
