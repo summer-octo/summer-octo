@@ -37,7 +37,7 @@ jobs:
       id: screenshot
       uses: swinton/screenshot-website@v1.x
       with:
-        source: https://svanboxel.github.io/secret-profile/
+        source: https://summer-octo.github.io/summer-octo/
         destination: weather.png
         width: 725
         height: 260
