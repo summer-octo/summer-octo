@@ -26,6 +26,7 @@ jobs:
       run: |
        if grep -q "${{env.handle}}" summer-footer.svg
        then
+        echo "already exists"
         grep -v "alt='${{env.handle}}'" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
        else
         echo "doesn't exist!"
@@ -39,6 +40,8 @@ jobs:
        
        IMGTAG="<td>$EMOJI<a href='https://github.com/${{ env.handle }}'><img alt='${{ env.handle }}' src='data:image/jpeg;base64,$IMAGE' width='25px' /></a></td>"
        sed -e "\|<!-- end-marker-column-row -->|i $IMGTAG" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
+       
+       rm profile.jpeg
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v2
       env:
