@@ -14,14 +14,12 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const req = {
+            return github.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: ${{ github.event.issue.number }}
               title: "😎 Summer profile picture for @${{github.actor}}"
-            };
-
-            await github.issues.update(req);
+            });
       - uses: actions/checkout@v1
       - name: fetch profile pictrue
         run: |
