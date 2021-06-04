@@ -12,7 +12,7 @@ on:
 concurrency: readme_update
 
 env: 
-  handle: ${{github.event.inputs.home || github.actor}}
+  handle: ${{github.event.inputs.handle || github.actor}}
   
 jobs:
   add-member-to-club:
