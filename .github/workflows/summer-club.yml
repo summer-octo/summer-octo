@@ -25,7 +25,7 @@ jobs:
        emojies="🍸🍹👙🐠🌞🏝🥂🍺🐬🥵😎🏄🏊🐚🌻🌴🍹🏝☀️🌞🕶️👕👙👡"
        EMOJI="${emojies:$(( RANDOM % ${#emojies} )):1}"
 
-       IMAGE="$(cat profile.jpeg | base64 -w 0)" 
+       IMAGE="$(cat profile.jpeg | tr -d \\n)" 
        echo $IMAGE
        
        IMGTAG="<td>$EMOJI<a href='https://github.com/${{ github.actor }}'><img alt='${{ github.actor }}' src='data:image/jpeg;base64,$IMAGE' width='25px' /></a></td>"
