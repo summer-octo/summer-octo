@@ -40,7 +40,7 @@ _Ready? Let's go!_
 <tr>
 <td>
 
-### Step 2: Decide what clothes to wear? 🥵
+### Step 2: Decide what clothes to wear 🥵
 	
 <img src="./weather.png" />
 				
