@@ -12,6 +12,7 @@ jobs:
       - name: Update comment
         uses: actions/github-script@v4
         with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const req = {
               owner: context.repo.owner,
