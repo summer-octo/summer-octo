@@ -1,9 +1,19 @@
 name: Join the Summer Club
 
-on: [workflow_dispatch, watch]
+on: 
+  workflow_dispatch:
+    inputs:
+        handle:
+          description: 'GitHub Handle'
+          required: true
+
+  watch:
 
 concurrency: readme_update
 
+env: 
+  handle: ${{github.event.inputs.home || github.actor}}
+  
 jobs:
   add-member-to-club:
     runs-on: ubuntu-latest
@@ -11,13 +21,13 @@ jobs:
     - uses: actions/checkout@v1
     - name: get picture
       run: |
-        curl https://avatars.githubusercontent.com/${{github.actor}} > profile.jpeg
-        echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}?s=60&v=4"
-    - name: add ${{github.actor}} to the club
+        curl https://avatars.githubusercontent.com/${{env.handle}} > profile.jpeg
+        echo -e "profile pic: https://avatars.githubusercontent.com/${{env.handle}}?s=60&v=4"
+    - name: add ${{env.handle}} to the club
       run: |
-       if grep -q "${{github.actor}}" summer-footer.svg
+       if grep -q "${{env.handle}}" summer-footer.svg
        then
-        grep -v "alt='${{github.actor}}'" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
+        grep -v "alt='${{env.handle}}'" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
        else
         echo "doesn't exist!"
        fi
@@ -25,10 +35,10 @@ jobs:
        emojies="🍸🍹👙🐠🌞🏝🥂🍺🐬🥵😎🏄🏊🐚🌻🌴🍹🏝☀️🌞🕶️👕👙👡"
        EMOJI="${emojies:$(( RANDOM % ${#emojies} )):1}"
 
-       IMAGE="$(cat profile.jpeg | tr -d \\n)" 
+       IMAGE="$(cat profile.jpeg | base64 | tr -d \\n)" 
        echo $IMAGE
        
-       IMGTAG="<td>$EMOJI<a href='https://github.com/${{ github.actor }}'><img alt='${{ github.actor }}' src='data:image/jpeg;base64,$IMAGE' width='25px' /></a></td>"
+       IMGTAG="<td>$EMOJI<a href='https://github.com/${{ env.handle }}'><img alt='${{ env.handle }}' src='data:image/jpeg;base64,$IMAGE' width='25px' /></a></td>"
        sed -e "\|<!-- end-marker-column-row -->|i $IMGTAG" summer-footer.svg  > summer-footer.svg.tmp && mv summer-footer.svg.tmp summer-footer.svg
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v2
