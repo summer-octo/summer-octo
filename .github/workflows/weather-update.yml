@@ -8,6 +8,7 @@ on:
         city:
           description: 'Weather city'
           required: true
+          default: Amsterdam
 
   schedule:
     - cron: "*/30 * * * *"
