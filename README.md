@@ -57,7 +57,13 @@ _Ready? Let's go!_
 ---
 
 ### Step 4: Participate in GitHub's Summer games
-	🌞 Todo
+	
+⭕ Connect Four: https://github.com/JonathanGin52 
+	
+♟ Chess: https://github.com/marcizhu 
+	
+🕹 Pokemon: https://github.com/HFO4 
+	
 
 ---
 
