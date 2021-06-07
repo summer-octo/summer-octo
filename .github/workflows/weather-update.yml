@@ -1,0 +1,65 @@
+name: Weather update
+
+concurrency: readme_update
+
+on: 
+  workflow_dispatch:
+      inputs:
+        city:
+          description: 'Weather city'
+          required: true
+          default: Amsterdam
+
+  schedule:
+    - cron: "*/30 * * * *"
+
+env: 
+  CITY: ${{github.event.inputs.city || 'Amsterdam'}}
+  
+jobs: 
+  set-weather-city-id:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:  
+        ref: github-pages
+    - name: get city id
+      run: |
+        CITY_ID=$(curl -s https://openweathermap.org/data/2.5/find\?q\=${{ env.CITY }}\&type\=like\&sort\=population\&cnt\=30\&appid\=${{ secrets.OPENWEATHER_API_TOKEN }} | jq '.list[0].id')
+        echo $CITY_ID
+        sed -i "1s|.*|<script>var city_id=$CITY_ID</script>|" index.html
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update city id
+        branch: github-pages
+        commit_user_name: My GitHub Actions Bot # defaults to "GitHub Actions"
+        commit_user_email: my-github-actions-bot@example.org # defaults to "actions@github.com"
+        commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
+  
+  update-weather-image:
+    needs: [set-weather-city-id]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Screenshot Website
+      id: screenshot
+      uses: swinton/screenshot-website@v1.x
+      with:
+        source: https://summer-octo.github.io/summer-octo/
+        destination: weather.png
+        width: 725
+        height: 260
+        delay: 20
+    - uses: actions/checkout@v2
+    - run: cp ${{ steps.screenshot.outputs.path }} weather.png
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update weather image
+        branch: main
+        commit_user_name: My GitHub Actions Bot # defaults to "GitHub Actions"
+        commit_user_email: my-github-actions-bot@example.org # defaults to "actions@github.com"
+        commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        path: weather.png
+     

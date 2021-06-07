@@ -1,0 +1,50 @@
+name: Summer me!
+
+on: 
+  issues: 
+    types: [labeled]
+  
+jobs:
+  summer-me-profile-pic:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.label.name == 'summer-me' }}
+    steps:
+      - name: Update comment
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            return await github.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.issue.number }},
+              title: "😎 Summer profile picture for @${{github.actor}}",
+              body: "Working on it, stay tuned and grab something to drink. 🍸" 
+            });
+      - uses: actions/checkout@v1
+      - name: fetch profile pictrue
+        run: |
+          curl https://avatars.githubusercontent.com/${{github.actor}} > profile.jpeg
+          echo -e "profile pic: https://avatars.githubusercontent.com/${{github.actor}}?s=400&v=4"
+      - uses: mfinelli/setup-imagemagick@v1
+      - run: mkdir profile-pic
+      - run:  convert profile.jpeg summer.png -resize 400x400 -gravity center -composite profile-pic/summer-${{github.actor}}.png
+      - name: Azure Storage Action
+        uses: lauchacarro/Azure-Storage-Action@v1.1
+        with:
+          connection-string: ${{secrets.AZURE_CONNECTION_STRING}}
+          folder: profile-pic
+          blob-container-name: summer-profiles
+          public-access-policy: public
+      - name: Comment Action
+        uses: JungWinter/comment@v1.1.0
+        with:
+          # create|edit
+          type: create
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            We made you summer-ready! Check out [our docs](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/customizing-your-profile/personalizing-your-profile) on how to update your profile picture.  
+            
+            ![](https://summerfest2021.blob.core.windows.net/summer-profiles/summer-${{ github.actor }}.png)'
+          issue_number: ${{ github.event.issue.number }}
+
