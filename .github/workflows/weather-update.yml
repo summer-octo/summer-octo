@@ -4,9 +4,17 @@ concurrency: readme_update
 
 on: 
   workflow_dispatch:
+      inputs:
+        city:
+          description: 'Weather city'
+          required: true
+
   schedule:
     - cron: "*/30 * * * *"
 
+env: 
+  CITY: ${{github.event.inputs.city || "Amsterdam"}}
+  
 jobs: 
   set-weather-city-id:
     runs-on: ubuntu-latest
@@ -19,8 +27,6 @@ jobs:
         CITY_ID=$(curl -s https://openweathermap.org/data/2.5/find\?q\=${{ env.CITY }}\&type\=like\&sort\=population\&cnt\=30\&appid\=${{ secrets.OPENWEATHER_API_TOKEN }} | jq '.list[0].id')
         echo $CITY_ID
         sed -i "1s|.*|<script>var city_id=$CITY_ID</script>|" index.html
-      env: 
-        CITY: 'AMSTERDAM'
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update city id
