@@ -13,7 +13,7 @@ on:
     - cron: "*/30 * * * *"
 
 env: 
-  CITY: ${{github.event.inputs.city || "Amsterdam"}}
+  CITY: ${{github.event.inputs.city || 'Amsterdam'}}
   
 jobs: 
   set-weather-city-id:
