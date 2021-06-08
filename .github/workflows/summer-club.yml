@@ -47,4 +47,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUSH_BRANCH: 'main'
-
+    - run: mkdir summer-footer && mv summer-footer.svg summer-footer/summer-footer.svg
+    - name: Azure Storage Action
+      uses: lauchacarro/Azure-Storage-Action@v1.1
+      with:
+        connection-string: ${{secrets.AZURE_CONNECTION_STRING}}
+        folder: summer-footer
+        blob-container-name: summer-profiles
+        public-access-policy: public
