@@ -69,8 +69,8 @@ _Ready? Let's go!_
 
 ### Step 5: Join ✨ GitHub's exclusive Summer Club ✨ 
 ✨ _By starring this repository_ ✨
-	
-<img src="https://summerfest2021.blob.core.windows.net/summer-profiles/summer-footer.svg?" width="1024" height="500">
+
+![](https://summerfest2021.blob.core.windows.net/summer-profiles/summer-footer.svg?)
 
 ---
 
