@@ -76,5 +76,7 @@ _Ready? Let's go!_
 
 ### Step 6: Spread the word and be creative with your summer-ready GitHub profile 📣
 
-Fork it! 
+_Fork this repository or check out https://awesomegithubprofile.tech/ for inspiration!_
+
 </div>
+
