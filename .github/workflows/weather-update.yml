@@ -67,6 +67,3 @@ jobs:
         blob-container-name: summer-profiles
         public-access-policy: public
     - run: . ./.github/workflows/scripts/purge-camo.sh summer-octo/summer-octo
-
-    - run: . ./.github/workflows/scripts/purge-camo.sh summer-octo/summer-octo
-     
