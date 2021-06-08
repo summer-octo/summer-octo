@@ -10,7 +10,7 @@
 	}
 	tr {
 	    display: inline-block;
-            max-width: 372px;
+            max-width: 362px;
 	}
   svg {
   display: block;
