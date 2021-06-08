@@ -48,7 +48,7 @@ _Ready? Let's go!_
 <td>
 	
 ### Step 3: Play some summer tunes 🎷
-[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=1114125855&cover_image=true&theme=default)](https://spotify-github-profile.vercel.app/api/view?uid=1114125855&redirect=true)
+[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=j78r24p1fcjh87e7zcilbb630&cover_image=true&theme=default)](https://github.com/kittinan/spotify-github-profile)
 			
 </td>
 </tr>
