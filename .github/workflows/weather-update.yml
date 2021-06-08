@@ -58,7 +58,7 @@ jobs:
         commit_user_name: My GitHub Actions Bot # defaults to "GitHub Actions"
         commit_user_email: my-github-actions-bot@example.org # defaults to "actions@github.com"
         commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
-    - run: mkdir weather && mv weather.png weather/weather.svg
+    - run: mkdir weather && mv weather.png weather/weather.png
     - name: Azure Storage Action
       uses: lauchacarro/Azure-Storage-Action@v1.1
       with:
