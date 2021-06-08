@@ -42,7 +42,7 @@ _Ready? Let's go!_
 
 ### Step 2: Decide what clothes to wear 🥵
 	
-[<img src="./weather.png" />](https://summer-octo.github.io/summer-octo/)
+[<img src="https://summerfest2021.blob.core.windows.net/summer-profiles/weather.png" />](https://summer-octo.github.io/summer-octo/)
 				
 </td>
 <td>
